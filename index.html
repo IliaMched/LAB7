@@ -6,15 +6,7 @@
 	<link rel="stylesheet" href="css/styles.css">
 
     <title>Lab 7</title>
-    <script>
-        function validateForm() {
-          let x = document.forms["myForm"]["name"].value;
-          if (x == "") {
-            alert("Name must be filled out");
-            return false;
-          }
-        }
-        </script>
+   
 </head>
 <h2>LAB 7</h2>
 <!-- Mouse Events -->
@@ -79,7 +71,46 @@
       mouseEventMessage.textContent = 'You left the button!';
     });
 
+  // Keyboard Events
+  const keyEventInput = document.getElementById('keyEventInput');
+    const keyEventMessage = document.getElementById('keyEventMessage');
     
+    keyEventInput.addEventListener('keyup', (event) => {
+      keyEventMessage.textContent = `You pressed: ${event.key}`;
+    });
+
+    // Form Events
+    const eventForm = document.getElementById('eventForm');
+    const formMessage = document.getElementById('formMessage');
+
+    eventForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      formMessage.textContent = 'Form submitted successfully!';
+    });
+
+    // Focus and Blur Events
+    const focusBlurInput = document.getElementById('focusBlurInput');
+    const focusBlurMessage = document.getElementById('focusBlurMessage');
+
+    focusBlurInput.addEventListener('focus', () => {
+      focusBlurMessage.textContent = 'You are typing in the text box!';
+    });
+
+    focusBlurInput.addEventListener('blur', () => {
+      focusBlurMessage.textContent = 'Please click the text box to type!';
+    });
+
+    // Event Delegation
+    const buttonContainer = document.getElementById('buttonContainer');
+    const delegationMessage = document.getElementById('delegationMessage');
+
+    buttonContainer.addEventListener('click', (event) => {
+      if (event.target.tagName === 'BUTTON') {
+        delegationMessage.textContent = `You clicked: ${event.target.textContent}`;
+      }
+    });
+    
+    //leftover code for previous mobile optimizaiton
     function toggleDetails(id) {
     const details = document.getElementById(id);
     if (details.style.display === "none") {
@@ -88,5 +119,6 @@
         details.style.display = "none";
     }
 }
+
 
 </script>
