@@ -67,6 +67,19 @@
 </body>
 </html>
 <script>
+    // Mouse Events codee
+    const mouseEventButton = document.getElementById('mouseEventButton');
+    const mouseEventMessage = document.getElementById('mouseEventMessage');
+    
+    mouseEventButton.addEventListener('mouseover', () => {
+      mouseEventMessage.textContent = 'You hovered over the button!';
+    });
+
+    mouseEventButton.addEventListener('mouseout', () => {
+      mouseEventMessage.textContent = 'You left the button!';
+    });
+
+    
     function toggleDetails(id) {
     const details = document.getElementById(id);
     if (details.style.display === "none") {
