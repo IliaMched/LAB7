@@ -16,83 +16,49 @@
         }
         </script>
 </head>
-<body>
-  
-    <header>
-        <h1>Lab 7</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<h2>LAB 7</h2>
+<!-- Mouse Events -->
+<section>
+    <h2>Mouse Events</h2>
+    <button id="mouseEventButton">Hover or Not</button>
+    <p id="mouseEventMessage">Hover over the button to see a message.</p>
+  </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I recently started a clothing brand that is getting some traction and my goal after this class is to be able to make a functioning mobile/desktop version of the website coded from scratch as I currently use Squarespace with some extra code I added to it.
- 
-</p>
-		<p>
-		I've previously been an intern at a digital marketing Agency as a front-end web developer and learned lots of HTML and JS tricks to make optimized HTML email forms and pages for every major device out there. I personally made HTML emails for CIBC, BMW, Johnson & Johnson and other companies as well. It was a while ago so my coding is rusty.
-		</p>
-    </section>
+  <!-- Keyboard Events -->
+  <section>
+    <h2>Keyboard Events</h2>
+    <input type="text" id="keyEventInput" placeholder="Type something here">
+    <p id="keyEventMessage">Press a key to see it displayed here.</p>
+  </section>
 
-   
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-gallery">
-            <div class="project-item">
-                <img src="images/mahito.png" alt="Project 1" class="project-photo">
-                <br>
-                <button class="toggle-details" onclick="toggleDetails('details1')">Details</button>
-                <p id="details1" class="project-details" style="display: none;">Inspired by the popular anime and manga, ‘Jujutsu no Kaisen’, this cotton jacquard knit garment is designed with a focus on durability and comfort. The design features Mahito, with embroidered stitch marks on the sleeves reminiscent of his style. Ensuring both style and substance, this piece promises a premium addition to your wardrobe that will stand the test of time.</p>
-            </div>
-            <div class="project-item">
-                <img src="images/NeckTAG.png" alt="Project 2" class="project-photo">
-                <br>
-                <button class="toggle-details" onclick="toggleDetails('details2')">Details</button>
-                <p id="details2" class="project-details" style="display: none;">Guts from Berserk custom painted with bleach dye. Has details on both sleeves. The bottom of the garments and the sleeves are bleached for an ombre effect
+  <!-- Form Events -->
+  <section>
+    <h2>Form Events</h2>
+    <form id="eventForm">
+      <label for="formInput">Your Name:</label>
+      <input type="text" id="formInput" name="name" required>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="formMessage">Submit the form to see a message.</p>
+  </section>
 
-                    
-                    
-                    </p>
-            </div>
-        </div>
-    </section>
+  <!-- Focus and Blur Events -->
+  <section>
+    <h2>Focus and Blur Events</h2>
+    <input type="text" id="focusBlurInput" placeholder="Focus or blur this input">
+    <p id="focusBlurMessage">Click into or out of the input to see a message.</p>
+  </section>
 
- 
-    <section id="contact">
-        <form name="myForm" action="#" onSubmit="return validateForm()" method="post">
-
-            <h1>REGISTRATION FORM</h1>
-           <label for="name">Full Name:</label>
-       <input type="text" id="name" name="name" placeholder="Ilia Mchedlishvili" required ><br><br>
-        
-           
-       <label for="email">Email Address:</label>
-       <input type="email" id="email" name="email" placeholder="example@yahoo.com" required><br><br>
-       
-       
-       <label for="textbox">Message:</label>
-<textarea id="textbox" name="textbox" placeholder="Write your message here" required></textarea><br><br>
-
-       
-                
-               
-       
-           <div class="buttoncontainer">
-                
-                <button type="submit" >Register</button>
-                <button type="reset" >Reset</button>
-                
-               </div>
-                <p>
-           This is not a real form. It is purely for learning and education purposes. Please be carefull with what information you enter as it may be used against you.
-           </p>
-       </form>
-    </section>
+  <!-- Event Delegation -->
+  <section>
+    <h2>Event Delegation</h2>
+    <div id="buttonContainer" class="container">
+      <button>Button 1</button>
+      <button>Button 2</button>
+      <button>Button 3</button>
+    </div>
+    <p id="delegationMessage">Click a button in the container to see its content.</p>
+  </section>
 
   
     <footer>
